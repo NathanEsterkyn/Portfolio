@@ -13,52 +13,79 @@
       background: #f9f9f9;
       color: #333;
     }
-
+    details {
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 0.5rem 1rem;
+      background: #f9f9f9;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      list-style: none; /* default carrot */
+    }
+    details[open] summary::after {
+      transform: rotate(90deg); /* rotate when open */
+    }
     header {
       background: #333;
       color: #fff;
       padding: 1rem 2rem;
       text-align: center;
     }
-
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 0.5rem;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+      cursor: pointer;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    .caption {
+      text-align: center;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
     header h1 {
       margin: 0;
     }
-
     nav {
       margin-top: 0.5rem;
     }
-
     nav a {
       color: #fff;
       margin: 0 1rem;
       text-decoration: none;
     }
-
     nav a:hover {
       text-decoration: underline;
     }
-
     section {
       padding: 2rem;
       max-width: 900px;
       margin: auto;
     }
-
     h2 {
       color: #444;
       border-bottom: 2px solid #ddd;
       padding-bottom: 0.5rem;
     }
-
     .project {
       margin-bottom: 1.5rem;
     }
-
     .project h3 {
       margin-bottom: 0.3rem;
     }
-
     footer {
       text-align: center;
       background: #333;
@@ -82,7 +109,10 @@
   <section id="about">
     <h2>About Me</h2>
     <p>
-      I am a Patented Inventor of biomedical devices, experienced Product Design Engineer, rock climber, maker, expert mechanic, and enthusiast of all things automotive.
+      I grew up in San Francisco, California, in and around the maker and innovation communities. I am a Patented Inventor of biomedical devices, experienced Product 
+      Design Engineer, rock climber, maker, expert mechanic, and enthusiast of all things automotive. I earned both my undergraduate and masters degrees in Mechanical 
+      Engineering from the Colorado School of Mines from 2019 to 2024, and currently live in Golden, Colorado, working in the biomedical technology feild and pursuing
+      spiritual enlightenment through outdoor Bouldering.
     </p>
   </section>
 
@@ -91,7 +121,100 @@
 
     <div class="project">
       <h3>BMW Z3 Track Car Build</h3>
-      <p>Starting with a 1999 BMW Z3 2.3 convertible, I did the following modifications to convert it into a track car.<a href="#">link to GitHub</a> or a demo.</p>
+      <p>Starting with a 1999 BMW Z3 2.3 convertible, I did all of the modifications to convert it into an S54-powered track car.<a href="YTlink">Link</a></p>
+      <div class="gallery">
+        <div>
+          <img src="assets/images/Z3_Film.JPEG" alt="Project Z3 as it sits, Ft. Ross, CA" width="600">
+          <div class="caption">Project Z3 as it sits, Ft. Ross, CA</div>
+        </div>
+        <div>
+          <img src="assets/images/Z3_Skid.JPG" alt="Two S54 machines, Route 9, CA" width="600">
+          <div class="caption">Two S54 machines, Route 9, CA</div>
+        </div>
+        <div>
+          <img src="assets/images/Unfortunate.JPG" alt="A series of unfortunate events, Route 9, CA" width="600">
+          <div class="caption">A series of unfortunate events, Route 9, CA</div>
+        </div>
+        <div>
+          <img src="assets/images/Laguna.JPG" alt="On Track, Laguna Seca, CA" width="600">
+          <div class="caption">On Track, Laguna Seca, CA</div>
+        </div>
+        <div>
+          <img src="assets/images/Laguna2.JPG" alt="Off Track, Laguna Seca, CA" width="600">
+          <div class="caption">Off Track, Laguna Seca, CA</div>
+        </div>
+      </div>
+      <details>
+        <summary>Project History</summary>
+        <h3>2019:</h3>
+        <p>
+          I purchased the car for $4500 from an elderly woman in Stockton, California. It had 137,000 miles on the chassis and a 2.3L M52TU engine paired 
+          with a getrag 5 speed manual transmission. The first modifications made to the car were a new set of wheels, 18x8.5 in the front and 18x9.5 in the rear.
+        </p>
+        <h3>2020:</h3>
+        <p>
+          After being sent home from university during the pandemic, I addressed some critical issues in the rear of the Z3's chassis, known to arise after
+          prolonged spirited driving. The primary design flaw present in the rear of the chassis is due to the older, E30 style, rear semi-trailing arm suspension design
+          being used in a vehicle with more power and more grip. The rubber bushings holding the rear subframe to the chassis wear and allow for rotational movement
+          allong the axis of the driveshaft, in turn putting strain on the single diferential mount, held to the trunk floor with several spot welds and presumably
+          hopes and dreams. After enough fatigue from heavy acceleration and braking, the welds fatigue, fracture, and the entire rear diferential mount rips free
+          from the trunk floor, leadiong to a miserable clunk. 
+        </p>
+        <p>
+          There are several solutions, however, knowing my intentions for this car were exclusively spireted driving and track time, I chose to design a weld-in
+          solution that would be strong enough to withstand all that would be demanded from the car. This consists of a new chromoly steel diferential mount, made
+          from a 4"x4" 10 gauge steel square structural member, with 1"x2" and 0.75"x1" chromoly rienforcments triangulated in the direction of highest load on 
+          acceleration. The design was vefified using SolidWorks Simulation, and the new diferential mount was fabricated outside the car before being welded to 
+          the chassis and trunk floor using plug welded gussets. The installation was completed using etching primer, seam sealer, and two component autpomotive 
+          paint, sealing the retrofit from the elements.
+        </p>
+        <p>
+          Polyurithane bushings throughout the rear eliminated the issue of subframe deflection, and new Feal 441 coilovers gave the car a new outlook on cornering
+          and stability. After these modifications I promptly ran out of cash and returned to university in Colorado.
+        </p>
+        <h3>2021-23:</h3>
+        <p>
+          I returned for the summer of 2022 with renewed motivation, this time to abandon the original drivetrain in pursuit of more power. Being financially
+          limited as a broke university student, I chose the route of a junkyard M54B30 from a 2002 pre-facelift 330i that I was able to buy for $300. A few hundred
+          more on refurbishment supplies later, the new engine was re-sealed and mounted in the car with a new clutch but the same Getrag 5 speed transmission. What
+          followed was a series of increasingly inconsequential decisions about how to adapt certain systems of the vehicle from a chassis designed for an M52TU to
+          an engine that was very much M54. I learned, in excruciating detail, the subtle differences between both platforms, and became increasingly certain that the
+          Z3 was just made from scraps laying around the BMW factory in Spartaionburg. The throttle is an example emblematic of these nuanced descrepancies; the Z3 
+          chassis was designed in a time of cable throttle, when a physical steel cable would connect the pedal directly to the throttle body, while the M54 hails from
+          a time of drive by wire throttle, where both the electronically actuated throttle body and potentiometer on the pedal connect to the DME. Similar adaptations
+          and modifications were strewn throughout the drivetrain, and made up most of the work, and most of the opertunities for custom bracketry and engineering
+          solutions.
+        </p>
+        <p>
+          By the end of the summer I had a fully functional Z3 3.0 equivalent, complete with a custom intake system, exhaust manifold, catch can, and tuned to run the 
+          better-flowing M50 intake manifold. Theoretical power was between 230-250 HP, however this powerplant would meet its demise before I could test that theory.
+        </p>
+        <h3>2024:</h3>
+        <p>
+          My M54B30 finally met its limit during the twilight laps of a long day of sessions at Laguna Seca. I had seen flickers of red on the dash during hard
+          cornering as the oil sloshed across my unbaffled oil pan, but I had dismissed it as a non issue due to the brevity of the warning light. As I was lifting off
+          while passing the sound booth I heard some unfortunate noises, presumably coming from my crankcase, and made the desision to just keep on it and send it back 
+          to the pits. Not even 400 feet later, the noises intensified and concluded in a large clunk that locked my rear wheels mid way up the hill to the corkscrew.
+          I quickly put in the clutch and coasted off track. The motor had siezed completely, but stayed intact, no oil and rod pieces out on track, no repremanding from
+          the track manager, but a total loss for my junkyard B30. As I towed the car home, I promised myself to not let it rot in the garage, and that I would be back 
+          for revenge next year.
+        </p>
+        <h3>2025:</h3>
+        <p>
+          I started plotting my revenge while sitting in the tow truck at Laguna, but needed some cash to make it happen. So I worked overtime, 12 hour days, one 
+          extra per week, for two months until I had enough to make it happen. Step one was to find the replacement motor, I was done messing with junkyard engines, and
+          for a naturally aspirated track build Z3, there seemed to be a clear right choice. I flew back to the bay and drove two hours north with Ethan to Clearlake, a
+          sleepy town northeast of Santa Rosa, to pull my new motor. The motor in question, an S54B32, my M54's older, sportier cousin. 100 extra HP, individual throttle
+          bodies, and most importantly an oiling system designed for track driving, with a baffled pan and two oil pickups. The donor car, a 2004 BMW M3, convertible, SMG, 
+          dove leather, silver paint, "S54 shipping container spec" according to Ethan. The owner of the car, a charismatic, middle aged high school teacher, had ambitions
+          of EV swapping the car. I had no idea why somone would want to discard the most integral part of the E46M3's excellent driving experience in favor of a cold, 
+          torqey EV drivetrain, but to each their own. One long day of toil in the low january sun later, we were driving home with a new to me motor.
+        </p>
+        <p>
+          The following months I would return to work on the car every month, mounting the drivetrain, adapting systems, similar to when I did the original swap, but with
+          much more experience and understanding. I built a custom exhaust...
+        </p>
+      </details>
     </div>
 
     <div class="project">
