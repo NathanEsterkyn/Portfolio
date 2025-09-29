@@ -39,6 +39,11 @@
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 0.5rem;
     }
+    .gallery-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.5rem;
+    }
     .gallery img {
       width: 100%;
       height: auto;
@@ -52,8 +57,9 @@
     }
     .caption {
       text-align: center;
-      margin-top: 0.5rem;
-      font-size: 0.9rem;
+      margin-top: 0.25rem;
+      margin-bottom: 0.5rem;
+      font-size: 0.75rem;
       color: #555;
     }
     header h1 {
@@ -109,10 +115,12 @@
   <section id="about">
     <h2>About Me</h2>
     <p>
-      I grew up in San Francisco, California, in and around the maker and innovation communities. I am a Patented Inventor of biomedical devices, experienced Product 
-      Design Engineer, rock climber, maker, expert mechanic, and enthusiast of all things automotive. I earned both my undergraduate and masters degrees in Mechanical 
-      Engineering from the Colorado School of Mines from 2019 to 2024, and currently live in Golden, Colorado, working in the biomedical technology feild and pursuing
-      spiritual enlightenment through outdoor Bouldering.
+      I grew up in San Francisco, California, in and around the maker community. I am a Patented Inventor of biomedical devices, experienced Product 
+      Design Engineer, rock climber, expert mechanic, and enthusiast of all things automotive. 
+    </p>
+    <p>
+      I earned both my undergraduate and masters degrees in Mechanical Engineering from the Colorado School of Mines from 2019 to 2024, and currently live in Golden, 
+      Colorado, working in the biomedical technology feild and pursuing enlightenment through outdoor Bouldering.
     </p>
   </section>
 
@@ -124,7 +132,7 @@
       <p>Starting with a 1999 BMW Z3 2.3 convertible, I did all of the modifications to convert it into an S54-powered track car.<a href="YTlink">Link</a></p>
       <div class="gallery">
         <div>
-          <img src="assets/images/Z3_Film.JPEG" alt="Project Z3 as it sits, Ft. Ross, CA" width="600">
+          <img src="assets/images/Z3_Film.JPG" alt="Project Z3 as it sits, Ft. Ross, CA" width="600">
           <div class="caption">Project Z3 as it sits, Ft. Ross, CA</div>
         </div>
         <div>
@@ -132,16 +140,8 @@
           <div class="caption">Two S54 machines, Route 9, CA</div>
         </div>
         <div>
-          <img src="assets/images/Unfortunate.JPG" alt="A series of unfortunate events, Route 9, CA" width="600">
-          <div class="caption">A series of unfortunate events, Route 9, CA</div>
-        </div>
-        <div>
           <img src="assets/images/Laguna.JPG" alt="On Track, Laguna Seca, CA" width="600">
           <div class="caption">On Track, Laguna Seca, CA</div>
-        </div>
-        <div>
-          <img src="assets/images/Laguna2.JPG" alt="Off Track, Laguna Seca, CA" width="600">
-          <div class="caption">Off Track, Laguna Seca, CA</div>
         </div>
       </div>
       <details>
@@ -199,6 +199,16 @@
           the track manager, but a total loss for my junkyard B30. As I towed the car home, I promised myself to not let it rot in the garage, and that I would be back 
           for revenge next year.
         </p>
+        <div class="gallery">
+          <div>
+            <img src="assets/images/Laguna2.jpg" alt="Engine locked up in the pits, Laguna Seca, CA" width="600">
+            <div class="caption">Engine locked up in the pits, Laguna Seca, CA</div>
+          </div>
+          <div>
+            <img src="assets/images/Sadness.jpg" alt="Plotting my revenge, Laguna Seca, CA" width="600">
+            <div class="caption">Plotting my revenge, Laguna Seca, CA</div>
+          </div>
+        </div>
         <h3>2025:</h3>
         <p>
           I started plotting my revenge while sitting in the tow truck at Laguna, but needed some cash to make it happen. So I worked overtime, 12 hour days, one 
@@ -210,10 +220,38 @@
           of EV swapping the car. I had no idea why somone would want to discard the most integral part of the E46M3's excellent driving experience in favor of a cold, 
           torqey EV drivetrain, but to each their own. One long day of toil in the low january sun later, we were driving home with a new to me motor.
         </p>
+        <div class="gallery-3">
+          <div>
+            <img src="assets/images/S54_Aquired.jpg" alt="New engine aquired!" width="280">
+            <div class="caption">New engine aquired!</div>
+          </div>
+          <div>
+            <img src="assets/images/M54_Out.jpg" alt="Out with the old..." width="280">
+            <div class="caption">Out with the old</div>
+          </div>
+          <div>
+            <img src="assets/images/Sitting_Pretty.jpg" alt="In with the new" width="280">
+            <div class="caption">In with the new</div>
+          </div>
+        </div>
         <p>
-          The following months I would return to work on the car every month, mounting the drivetrain, adapting systems, similar to when I did the original swap, but with
-          much more experience and understanding. I built a custom exhaust...
+          I returned to work on the car every month, mounting the drivetrain, adapting systems, similar to when I did the original swap, but with much more 
+          experience and understanding. I built a custom exhaust, fabricated mounts for an oil cooler mount, built an intake system, and simplified the wiring.
         </p>
+        <div class="gallery-3">
+          <div>
+            <img src="assets/images/Exhaust1.jpg" alt="Fabricating the header junction" width="280">
+            <div class="caption">Fabricating the header junction</div>
+          </div>
+          <div>
+            <img src="assets/images/Exhaust3.jpg" alt="Fabricating the midpipe" width="280">
+            <div class="caption">Fabricating the midpipe</div>
+          </div>
+          <div>
+            <img src="assets/images/Exhaust5.jpg" alt="V1.0 of a custom stainless exhaust" width="280">
+            <div class="caption">V1.0 of a custom stainless exhaust</div>
+          </div>
+        </div>
       </details>
     </div>
 
@@ -223,19 +261,44 @@
         For my main system architexture I used an ESP32 S3 module that is wifi enabled, allowing me to adjust requested temperature,
         monitor the status of my room and AC unit, and manually control the unit from anywhere via a mobile app.
       </p>
+      <div class="gallery">
+        <div>
+          <img src="assets/images/AC_Monitor1.jpg" alt="AC monitoring and control via the internet!" width="600">
+          <div class="caption">AC monitoring and control via the internet!</div>
+        </div>
+        <div>
+          <img src="assets/images/AC_Monitor4.jpg" alt="3D printed housing with embedded Nema 5-15P" width="600">
+          <div class="caption">3D printed housing with embedded Nema 5-15P</div>
+        </div>
+      </div>
+      <details>
+        <summary>Project History</summary>
+      </details>
     </div>
 
     </div class="project">
-    <h3>Made-From-Scratch sysiphus table</h3>
-    <p>I made a robotically controlled zen garden style sand table, also known as a sysiphus table, that uses a robotic gantry
-      attatched to a magnet to pull a steel ball bearing through a thin layer of sand. I built all aspects of this project from scratch,
-      including: designing a custom PCB to utilize stepper motor controllers, power circuitry, and an AVR microcontroller. Programming 
-      the board from scratch in embedded C and flashing using AVRdude, writing several custom libraries to control each subsystem.
+    <h3>Made-From-Scratch sisyphus table</h3>
+    <p>I made a robotically controlled zen garden style sand table, also known as a sisyphus table, that uses a robotic gantry
+      attatched to a magnet to pull a steel ball bearing through a thin layer of sand. A partner and I built all aspects of this project 
+      from scratch, including: designing a custom PCB to utilize stepper motor controllers, power circuitry, and an AVR microcontroller. 
+      Programming the board from scratch in embedded C and flashing using AVRdude, writing several custom libraries to control each subsystem.
       Designing and manufacturing the polar coordinate gantry, running my own CNC programs to manufacture a set of custom parts and to
       modify off-the-shelf ones. And finally, doing some woodworking, wood CNC, laser scoring, and additive manufacturing to create the 
       cylindrical housing.
     </p>
-
+    <div class="gallery">
+      <div>
+        <img src="assets/images/sisyphus1.jpg" alt="The completed table" width="600">
+        <div class="caption">The completed table</div>
+      </div>
+      <div>
+        <img src="assets/images/sisyphus2.jpg" alt="A spiral labarynth drawn in sand" width="600">
+        <div class="caption">A spiral labarynth drawn in sand</div>
+      </div>
+    </div>
+    <details>
+      <summary>Project History</summary>
+    </details>
   </section>
 
   <section id="contact">
