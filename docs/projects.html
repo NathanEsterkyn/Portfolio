@@ -246,10 +246,7 @@
 
     <div class="project">
       <h3>Iot enabled, temperature sensing AC controller</h3>
-      <p>I created an iot enabled smart outlet that measures temperature and humidity to control an in-window AC unit.
-        For my main system architexture I used an ESP32 S3 module that is wifi enabled, allowing me to adjust requested temperature,
-        monitor the status of my room and AC unit, and manually control the unit from anywhere via a mobile app.
-      </p>
+      <p>I created an iot enabled smart outlet that measures temperature and humidity to control an in-window AC unit.</p>
       <div class="gallery">
         <div>
           <img src="assets/images/AC_Monitor1.jpg" alt="AC monitoring and control via the internet!" width="600">
@@ -262,6 +259,64 @@
       </div>
       <details>
         <summary>Project History</summary>
+        <h3>Hardware:</h3>
+        <p>For my main system architecture I used a WiFi enabled ESP32 module, allowing me to adjust requested temperature, monitor 
+          the status of my room and AC unit, and manually control the unit from anywhere via a mobile app. For temperature and
+          humidity monitoring, I used the incredibly common DHT11 sensor, which was easy to power using 5V and easy to read using my
+          ESP module.
+        </p>
+        <p>For the power supply circuitry, I started with a circuit I pulled from an off the shelf switched outlet. This unit already had a
+          transformerless power supply, consisting of an MB6F full bridge rectifier to convert the 120VAC to around 24VDC, a 7110 3.3V 
+          voltage regulator to supply power to the small microcontroller onboard, A relay linked to a J3Y transistor, and a few passives 
+          and diodes to tie it all together. I began by mapping out the circuit and grabbing datasheets for the main components. I quickly
+          realized that the transformerless power supply design is fundimentally suited for ultra low current draw equipment, and that
+          the ESP32, that regularly pulls over 300mA during WiFi activities, was ill-suited for this type of power supply, which would brown
+          out and cause the ESP32 to reset every time a WiFi command was executed.
+        </p>
+        <div class="gallery-3">
+          <div>
+            <img src="assets/images/Original_Idea.png" alt="Original concept drawing" width="280">
+            <div class="caption">Original concept drawing</div>
+          </div>
+          <div>
+            <img src="assets/images/Tps_Diagram.png" alt="Transformerless power supply diagram" width="280">
+            <div class="caption">Transformerless power supply diagram</div>
+          </div>
+          <div>
+            <img src="assets/images/Main_Board.png" alt="Main board schematic diagram" width="280">
+            <div class="caption">Main board schematic diagram</div>
+          </div>
+        </div>
+        <p>I decided to scrap the idea of just piggybacking off of the existing power circuitry, and added a small 5V switching supply
+          pulled from a phone charger, plenty capable of providing up to 1000mA at 5V, more than the ESP32 module could ever pull. For
+          safety I completley desoldered the existing transformerless supply, and kept only the LEDs, pushbutton, and relay on the main
+          board, desoldering the existing microcontroller and connecting the ESP32 to traces leading to the remaining components. I chose
+          to place the raw module, insulated with heat shrink tubing, in its own compartment, with physical bariers isolating it from the
+          high voltage circuitry and small jumper wires connecting the two boards and the small switching power supply to the ESP32.
+        </p>
+        <p>The housing was modeled in SolidWorks, printed in two parts with a standard FDM 3D printer in black ABS. The components are held 
+          in using two small screws and a compliant mechanism, and the case was fused together using solvent welding with cyclohexanone. 
+          The pushbutton cover was taken from the off-the-shelf smart outlet unit, and features a clear window to view the LED indicators, 
+          and a satisfying click when pressing the pushbutton. The temperature/humidity sensor is lodged in place via a compliant mechanism.
+        </p>
+        <div class="gallery-3">
+          <div>
+            <img src="assets/images/AC_Monitor5.jpg" alt="Components nested in housing" width="280">
+            <div class="caption">Components nested in housing</div>
+          </div>
+          <div>
+            <img src="assets/images/AC_Monitor2.jpg" alt="Main board and small switching PS" width="280">
+            <div class="caption">Main board and small switching PS</div>
+          </div>
+          <div>
+            <img src="assets/images/AC_Monitor3.jpg" alt="The ESP32 module hidden inside" width="280">
+            <div class="caption">The ESP32 module hidden inside</div>
+          </div>
+        </div>
+        <h3>Firmware:</h3>
+        <p>
+
+        </p>
       </details>
     </div>
 
