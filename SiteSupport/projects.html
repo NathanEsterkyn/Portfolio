@@ -100,6 +100,9 @@
       padding: 1rem;
       margin-top: 2rem;
     }
+    main {
+      text-align: center;
+    }
   </style>
 </head>
 <body>
@@ -119,15 +122,21 @@
 
     <div class="project">
       <h3>BMW Z3 Track Car Build</h3>
-      <p>Starting with a 1999 BMW Z3 2.3 convertible, I did all of the modifications to convert it into an S54-powered track car.</p>
+      <main>
+        <div>
+          <img src="assets/images/Z3/Z3_Skid.JPG" alt="Two S54 machines, Route 9, CA" width="800">
+          <div class="caption">Two S54 machines, Route 9, CA</div>
+        </div>
+        <p>Starting with a 1999 BMW Z3 2.3 convertible, I did all of the modifications to convert it into an S54-powered track car.</p>
+      </main>
       <div class="gallery">
         <div>
           <img src="assets/images/Z3/Z3_Film.JPG" alt="Project Z3 as it sits, Ft. Ross, CA" width="600">
           <div class="caption">Project Z3 as it sits, Ft. Ross, CA</div>
         </div>
         <div>
-          <img src="assets/images/Z3/Z3_Skid.JPG" alt="Two S54 machines, Route 9, CA" width="600">
-          <div class="caption">Two S54 machines, Route 9, CA</div>
+          <img src="assets/images/Z3/TwinPeaks.jpg" alt="Twin Peaks, San Francisco, CA" width="600">
+          <div class="caption">Twin Peaks, San Francisco, CA</div>
         </div>
         <div>
           <img src="assets/images/Z3/Laguna.JPG" alt="On Track, Laguna Seca, CA" width="600">
@@ -295,8 +304,8 @@
           ESP module.
         </p>
         <p>For the power supply circuitry, I started with a circuit I pulled from an off the shelf switched outlet. This unit already had a
-          transformerless power supply, consisting of an MB6F full bridge rectifier to convert the 120VAC to around 24VDC, a 7110 3.3V 
-          voltage regulator to supply power to the small microcontroller onboard, A relay linked to a J3Y transistor, and a few passives 
+          transformerless power supply, consisting of an MB6F full bridge rectifier to convert the 120VAC to around 24VDC, a HM7110 3.3V 
+          voltage regulator to supply power to the small microcontroller onboard, A relay linked to a S8050 J3Y NPN transistor, and a few passives 
           and diodes to tie it all together. I began by mapping out the circuit and grabbing datasheets for the main components. I quickly
           realized that the transformerless power supply design is fundamentally suited for ultra low current draw equipment, and that
           the ESP32, that regularly pulls over 300mA during WiFi activities, was ill-suited for this type of power supply, which would brown
@@ -316,6 +325,12 @@
             <div class="caption">Main board schematic diagram</div>
           </div>
         </div>
+        <main>
+          <div>
+            <img src="assets/images/AC Monitor/AC_Monitor6.png" alt="Full project schematic" width="800">
+            <div class="caption">Full project schematic</div>
+          </div>
+        </main>
         <p>I decided to scrap the idea of just piggybacking off the existing power circuitry, and added a small 5V switching supply
           pulled from a phone charger, plenty capable of providing up to 1000mA at 5V, more than the ESP32 module could ever pull. For
           safety I completely desoldered the existing transformerless supply, and kept only the LEDs, pushbutton, and relay on the main
