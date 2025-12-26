@@ -106,7 +106,11 @@
       margin-top: 2rem;
     }
     main {
+      text-align: left;
+    }
+    loneImage {
       text-align: center;
+
     }
 
     /* ---------- Layout ---------- */
@@ -139,10 +143,10 @@
 
     /* Expand on hover */
     .sidebar:hover {
-      width: 280px;                /* expanded width */
+      width: auto;                /* expanded width */
     }
     .sidebar:hover + .content {
-      margin-left: 280px;
+      margin-left: 300px;
     }
     /* Inner content */
     .sidebar-inner {
@@ -240,8 +244,17 @@
         <h2>Projects</h2>
         <ul>
           <li><a href="#project1">BMW Z3 Track Car Build</a></li>
-          <li><a href="#project2">IoT Enabled AC controller</a></li>
-          <li><a href="#project3">Scratchbuilt Sisyphus table</a></li>
+          <li><a href="#project2">LoRa IoT Water Tank Monitor</a></li>
+          <li><a href="#project3">IoT Enabled AC controller</a></li>
+          <li><a href="#project4">Scratchbuilt Sisyphus table</a></li>
+          <li><a href="#project5">Custom Car Camping System</a></li>
+          <li><a href="#project6">Climbing-Focused Fitness Tracker</a></li>
+          <li><a href="#project7">Lunar Surface Preparation Simulation</a></li>
+          <li><a href="#project8">Snowmobile mounted Ski Racks</a></li>
+          <li><a href="#project9">Plastic Recycling Fine Size Reduction</a></li>
+          <li><a href="#project10">Various Drone Projects</a></li>
+          <li><a href="#project11">Various 3D printing Projects</a></li>
+          <li><a href="#project12">Film Photography Projects</a></li>
         </ul>
       </div>
     </nav>
@@ -252,7 +265,7 @@
         <div class="project"> <h3>BMW Z3 Track Car Build</h3>
           <main>
             <div>
-              <img src="assets/images/Z3/Z3_Skid.JPG" alt="Two S54 machines, Route 9, CA" width="800">
+              <img src="assets/images/Z3/Z3_Skid.JPG" alt="Two S54 machines, Route 9, CA" width="900">
               <div class="caption">Two S54 machines, Route 9, CA</div>
             </div>
             <p>Starting with a 1999 BMW Z3 2.3 convertible, I did all of the modifications to convert it into an S54-powered track car.</p>
@@ -468,8 +481,8 @@
         </div>
       </section>
 
-      <!------------- Project 2 ------------->
-      <section id="project2"> 
+      <!------------- Project 3 ------------->
+      <section id="project3"> 
         <div class="project"> <h3>IoT enabled, temperature sensing AC controller</h3>
           <p>I created an IoT enabled smart outlet that measures temperature and humidity to control an in-window AC unit.</p>
           <div class="gallery">
@@ -512,12 +525,12 @@
                 <div class="caption">Main board schematic diagram</div>
               </div>
             </div>
-            <main>
+            <loneImage>
               <div>
                 <img src="assets/images/AC Monitor/AC_Monitor6.png" alt="Full project schematic" width="800">
                 <div class="caption">Full project schematic</div>
               </div>
-            </main>
+            </loneImage>
             <p>I decided to scrap the idea of just piggybacking off the existing power circuitry, and added a small 5V switching supply
               pulled from a phone charger, plenty capable of providing up to 1000mA at 5V, more than the ESP32 module could ever pull. For
               safety I completely desoldered the existing transformerless supply, and kept only the LEDs, pushbutton, and relay on the main
@@ -525,16 +538,13 @@
               to place the raw module, insulated with heat shrink tubing, in its own compartment, with physical barriers isolating it from the
               high voltage circuitry and small jumper wires connecting the two boards and the small switching power supply to the ESP32.
             </p>
-            <p>The housing was modeled in SolidWorks, printed in two parts with a standard FDM 3D printer in black ABS. The components are held 
+            <p>The housing was modeled in SolidWorks, Although I designed the housing with draft angles, intended to be injection molded, I 
+              printed the prototype model in two parts with a standard FDM 3D printer in black ABS. The components are held 
               in using two small screws and a compliant mechanism, and the case was fused together using solvent welding with cyclohexanone. 
               The pushbutton cover was taken from the off-the-shelf smart outlet unit, and features a clear window to view the LED indicators, 
               and a satisfying click when pressing the pushbutton. The temperature/humidity sensor is lodged in place via a compliant mechanism.
             </p>
-            <div class="gallery-3">
-              <div>
-                <img src="assets/images/AC Monitor/AC_Monitor5.jpg" alt="Components nested in housing" width="280">
-                <div class="caption">Components nested in housing</div>
-              </div>
+            <div class="gallery">
               <div>
                 <img src="assets/images/AC Monitor/AC_Monitor2.jpg" alt="Main board and small switching PS" width="280">
                 <div class="caption">Main board and small switching PS</div>
@@ -544,16 +554,30 @@
                 <div class="caption">The ESP32 module hidden inside</div>
               </div>
             </div>
+            <loneImage>
+              <div>
+                <img src="assets/images/AC Monitor/AC_Monitor5.jpg" alt="Components nested in housing" width="600">
+                <div class="caption">Components nested in housing</div>
+              </div>
+              <div>
+                <img src="assets/images/AC Monitor/Outlet_Case.png" alt="Outlet case model in SolidWorks" width="800">
+                <div class="caption">Outlet case model in SolidWorks</div>
+              </div>
+              <div>
+                <img src="assets/images/AC Monitor/Outlet_Face.png" alt="Outlet face model in SolidWorks" width="800">
+                <div class="caption">Outlet face model in SolidWorks</div>
+              </div>
+            </loneImage>
             <h3>Firmware:</h3>
             <p>
-
+              The firmware was written in the Arduino IDE, and is available here:
             </p>
           </details>
         </div>
       </section>
 
-      <!------------- Project 3 ------------->
-      <section id="project3">
+      <!------------- Project 4 ------------->
+      <section id="project4">
         <div class="project"> <h3>Made-From-Scratch Sisyphus table</h3>
           <p>I made a robotically controlled Zen garden style sand table, also known as a Sisyphus table, that uses a robotic gantry
             attached to a magnet to pull a steel ball bearing through a thin layer of sand. 
@@ -578,6 +602,85 @@
               woodworking, wood CNC, laser scoring, and additive manufacturing to create the cylindrical housing.
             </p>
             <h3>Hardware</h3>
+            <div class="gallery">
+              <div>
+                <img src="assets/images/Sisyphus/sisyphus3.jpg" alt="The gantry underneath" width="600">
+                <div class="caption">The gantry underneath</div>
+              </div>
+              <div>
+                <img src="assets/images/Sisyphus/sisyphus4.jpg" alt="Laser scoring technique used to bend the plywood exterior" width="600">
+                <div class="caption">Laser scoring technique used to bend the plywood exterior</div>
+              </div>
+            </div>
+            <p>
+              The gantry and interface panels were built using a combination of resin 3D printing, CNC machining, and sheet metal bending. 
+              The printed and CNC-machined components were manufactured by me on a Formlabs Form 3 and a Haas Mini Mill 3-axis CNC. I 
+              contracted out the manufacture of the sheet metal components to SendCutSend. The entire assembly was designed in SolidWorks 
+              prior to ordering any materials.
+            </p>
+            <loneImage>
+              <div>
+                <img src="assets/images/Sisyphus/sisyphus5.jpg" alt="Clamping strategy for the housing, using precise CNC machined forms aligned with a steel dowel" width="600">
+                <div class="caption">Clamping strategy for the housing, using precise CNC machined forms aligned with a steel dowel</div>
+              </div>
+            </loneImage>
+            <p>
+              The outer housing was constructed from 1/4" and 1/2" plywood using a combination of laser cutting and scoring techniques, 
+              and CNC machining with the help of a ShopBot wood CNC router. The cylindrical outer structure and sand support plate were 
+              cut on the laser, using laser scoring to give them flexibility. Circular forms were machined from MDF on the ShopBot to 
+              assist in the glue-up of the scored components. This laser scoring process takes advantage of the draft angles left when 
+              cutting wood with a laser. When three-layer plywood is scored but not fully cut through, a trapezoidal void is left in the 
+              plywood, bisecting both the top layer of veneer and the mid layer, leaving the base veneer intact. I aligned the grain of 
+              the bottom veneer to maximize strength along the axis of the bend, and performed testing using different score spacing to 
+              achieve the best bend radius that aligned with my housing design. In this case, the spacing was about 1/4".
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <!------------- Project 5 ------------->
+      <section id="project5">
+        <div class="project"> <h3>Custom Folding Car Camper</h3>
+          <p> I built a custom car camping solution for my SUV, the system allows for comfortable sleep on climbing trips and has provisions for
+            storage of cooking supplies and climbing equipment while the folding capability allows use of the rear seats. 
+          </p>
+          <div class="gallery">
+            <div>
+              <img src="assets/images/Car Camper/CarCamper1.jpg" alt="Two large compartments in the left drawer" width="600">
+              <div class="caption">Two large compartments in the left drawer</div>
+            </div>
+            <div>
+              <img src="assets/images/Car Camper/CarCamper2.jpg" alt="Small compartments in the right drawer" width="600">
+              <div class="caption">Small compartments in the right drawer</div>
+            </div>
+            <div>
+              <img src="assets/images/Car Camper/CarCamper3.png" alt="Sleeping setup with air mattress and sleeping bag" width="600">
+              <div class="caption">Sleeping setup with air mattress and sleeping bag</div>
+            </div>
+          </div>
+          <details>
+            <summary>Project History</summary>
+            <p>
+              I built a custom car camping solution for my SUV. The system allows for comfortable sleep on climbing trips and has provisions for 
+              storage of cooking supplies and climbing equipment, while the folding capability allows use of the rear seats. I designed and built 
+              the main platform in the spring of 2020, but did not complete the locking drawer system until 2023.
+            </p>
+            <p>
+              The main platform is constructed from 3/4" plywood, finished with black exterior paint and white interior paint, and is built in 
+              three sections separated by hinges. This allows the setup to fold up inside the car without contacting the headliner and stow in 
+              the trunk, out of sight, when not used. When you want to set up the bed, you simply put down the rear seats and unfold the structure 
+              to reveal a flat surface to sleep on.
+            </p>
+            <p>
+              I designed the system in SolidWorks using measurements of my car, a 2013 BMW X3, but it has fit in most SUVs I have tried it in. The 
+              drawers were added later and are made from 1/2" plywood, supported by 120 lb drawer slides. The left drawer is general purpose and has 
+              two zones: one for tall items and one for short items. The right drawer has zones specifically designed to fit my camping stove, pots, 
+              cleaning supplies, spatulas and knives, and cooking fuel.
+            </p>
+            <p>
+              The right drawer also has a finished piece of plywood that serves both as a lid for the drawer and as a surface to cook on. The drawers 
+              were both designed in SolidWorks and added to the assembly before purchasing material, and are fully removable for easy reconfiguration.
+            </p>
           </details>
         </div>
       </section>
