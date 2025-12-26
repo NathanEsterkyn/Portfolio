@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects | Your Name</title>
+
+  <style>
+    /* ---------- Global ---------- */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #222;
+      background-color: #ffffff;
+    }
+
+    h1, h2, h3 {
+      margin-top: 0;
+    }
+
+    /* ---------- Layout ---------- */
+    .container {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* ---------- Sidebar ---------- */
+    .sidebar {
+      width: 240px;
+      padding: 24px;
+      background-color: #f4f4f4;
+      border-right: 1px solid #ddd;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      box-sizing: border-box;
+    }
+
+    .sidebar h2 {
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar li {
+      margin-bottom: 12px;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: #333;
+      font-size: 15px;
+    }
+
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+
+    /* ---------- Main Content ---------- */
+    .content {
+      flex: 1;
+      padding: 40px;
+      box-sizing: border-box;
+      max-width: 900px;
+    }
+
+    section {
+      margin-bottom: 80px;
+    }
+
+    section h2 {
+      font-size: 26px;
+      margin-bottom: 12px;
+    }
+
+    section p {
+      line-height: 1.6;
+      max-width: 750px;
+    }
+
+    .meta {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 16px;
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- ===== Sidebar ===== -->
+    <nav class="sidebar">
+      <h2>Projects</h2>
+      <ul>
+        <li><a href="#project1">Ultrasonic Level Sensor</a></li>
+        <li><a href="#project2">Solar Battery Charger</a></li>
+        <li><a href="#project3">Sheet Metal Bracket</a></li>
+      </ul>
+    </nav>
+
+    <!-- ===== Main Content ===== -->
+    <main class="content">
+
+      <h1>Selected Projects</h1>
+      <p class="meta">
+        Mechanical / Embedded Systems / Product Design
+      </p>
+
+      <!-- ---------- Project 1 ---------- -->
+      <section id="project1">
+        <h2>Ultrasonic Level Sensor</h2>
+        <p class="meta">Arduino · 3.3V Systems · Waterproof Design</p>
+
+        <p>
+          Designed and implemented a low-power ultrasonic water level sensor
+          capable of measuring depths from 0.5–5 meters. The system interfaces
+          via serial output and operates on a 3.3V supply for battery-powered
+          applications.
+        </p>
+
+        <p>
+          Key challenges included noise rejection, beam angle optimization,
+          and long-term environmental reliability.
+        </p>
+      </section>
+
+      <!-- ---------- Project 2 ---------- -->
+      <section id="project2">
+        <h2>Solar Battery Charger</h2>
+        <p class="meta">Li-Ion · Power Electronics · Thermal Monitoring</p>
+
+        <p>
+          Developed a solar-powered charging syste
