@@ -103,6 +103,22 @@
     main {
       text-align: center;
     }
+    .download-btn {
+      display: inline-block;
+      padding: 12px 20px;
+      background-color: #0071e3;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    .download-btn:hover {
+      background-color: #005bb5;
+    }
+    buttonLocation {
+      text-align: center;
+    }
   </style>
 </head>
 <body>
@@ -116,24 +132,28 @@
       <a href="resume.html">Resume</a>
     </nav>
   </header>
-
+  <!------------- Main About Section ------------->
   <section id="about">
     <h2>About Me</h2>
     <main>
-    <div>
-      <img src="assets/images/Profile.jpg" alt="Bounce Log>>" width="600">
-    </div>
-    <p>
-      I grew up in San Francisco, California, in and around the maker community. I am a patented inventor of biomedical devices, experienced product 
-      design engineer, rock climber, expert mechanic, and enthusiast of all things automotive. 
-    </p>
-    <p>
-      I earned both my undergraduate and masters degrees in mechanical engineering from the Colorado School of Mines from 2019 to 2024, and currently live in Golden, 
-      Colorado, working in the biomedical technology field and spend most of my free time working on personal projects, and outdoors Bouldering.
-    </p>
-  </main>
+      <div>
+        <img src="assets/images/Profile.jpg" alt="Bounce Log>>" width="600">
+      </div>
+      <p>
+        I grew up in San Francisco, California, in and around the maker community. I am a patented inventor of biomedical devices, experienced product 
+        design engineer, rock climber, expert mechanic, and enthusiast of all things automotive. 
+      </p>
+      <p>
+        I earned both my undergraduate and masters degrees in mechanical engineering from the Colorado School of Mines from 2019 to 2024, and currently live in Golden, 
+        Colorado, working in the biomedical technology field and spend most of my free time working on personal projects, and outdoors Bouldering.
+      </p>
+      <buttonLocation>
+        <a href="assets/NE_Resume.pdf" target="_blank" download class="download-btn">
+          Download Resume (PDF)
+        </a>
+      </buttonLocation>
+    </main>
   </section>
-  
   <footer>
     <p>&copy; 2025 Nathan Esterkyn. All rights reserved.</p>
   </footer>
