@@ -256,13 +256,16 @@
           <li><a href="#project4">IoT Enabled AC controller</a></li>
           <li><a href="#project5">Scratchbuilt Sisyphus table</a></li>
           <li><a href="#project6">Custom Car Camping System</a></li>
-          <li><a href="#project7">Climbing-Focused Fitness Tracker</a></li>
-          <li><a href="#project8">Lunar Surface Preparation Simulation</a></li>
-          <li><a href="#project9">Snowmobile mounted Ski Racks</a></li>
-          <li><a href="#project10">Plastic Recycling Fine Size Reduction</a></li>
-          <li><a href="#project11">Various Drone Projects</a></li>
-          <li><a href="#project12">Various 3D printing Projects</a></li>
-          <li><a href="#project13">Film Photography Projects</a></li>
+          <li><a href="#project7">Portable Cryoablation System</a></li>
+          <!-- <li><a href="#project8">Climbing-Focused Fitness Tracker</a></li>
+          <li><a href="#project9">3D Printer Projects</a></li>
+          <li><a href="#project10">Lunar Surface Preparation Simulation</a></li>
+          <li><a href="#project11">Snowmobile mounted Ski Racks</a></li>
+          <li><a href="#project12">Plastic Recycling Fine Size Reduction</a></li>
+          <li><a href="#project13">Search + Rescue Drone Project</a></li>
+          <li><a href="#project14">FPV Drone Projects</a></li>
+          <li><a href="#project15">Various 3D printing Projects</a></li>
+          <li><a href="#project16">Film Photography Projects</a></li> -->
         </ul>
       </div>
     </nav>
@@ -725,6 +728,123 @@
               The right drawer also has a finished piece of plywood that serves both as a lid for the drawer and as a surface to cook on. The drawers 
               were both designed in SolidWorks and added to the assembly before purchasing material, and are fully removable for easy reconfiguration.
             </p>
+          </details>
+        </div>
+      </section>
+
+      <!------------- Project 7 ------------->
+      <section id="project7">
+        <div class="project"> <h3>Portable Cryoablation System</h3>
+          <loneImage>
+                <div>
+                  <img src="assets/images/Ananya/Ananya_Prototype.png" alt="A prototype system I built specifically for Y-Combinator class of 2021 showcase" width="600">
+                  <div class="caption">A prototype system I built specifically for Y-Combinator class of 2021 showcase with it's case removed</div>
+                </div>
+            </loneImage>
+          <p>
+            While working with Ananya Health, I developed a portable Cryoablation system designed to treat cervical cancer in areas without access to
+            refrigerant gas infrastructure or reliable power. The device went through many iterations while I was with the company. Starting with
+            a few proof-of-concept models that used standard components from R410A refrigeration systems. These devices ran on typical 120VAC/60Hz 
+            power and used compressors, condensers, and filter/drier units from in-window AC units. The evaporator was replaced with a thin PEEK flow
+            restriction tube, a copper probe, and an expansion sleeve. This concentrated the cooling power of the evaporating working fluid in one area,
+            making it useful for freezing or ablation of cancerous lesions on the cervix. 
+          </p>
+          <details>
+            <p>
+              The first devices overpreformed the specification required 
+              for cryoablation, reaching -40 degrees celcius in under a minute, and providing over 10,000 to 14,000 BTU of cooling capacity. They served
+              as a fantastic demonstration of the potential for portable closed-loop cryoablative devices, and, along with the skillful work of our team,
+              helped garner the company funding to continue our research and a spot in the Y-Combinator class of 2021. I am pleased to say I had an 
+              instrumental role in the early days of Ananya Health and contributed greatly to the success of our technology.
+            </p>
+            <div class="gallery">
+              <div>
+                <img src="assets/images/Ananya/IMG_1295.jpeg" alt="The probe I built for our first proof-of-concept system" width="600">
+                <div class="caption">The probe I built for our first proof-of-concept system</div>
+              </div>
+              <div>
+                <img src="assets/images/Ananya/IMG_1338.jpeg" alt="Charging our first system with R410A working fluid" width="600">
+                <div class="caption">Charging our first system with R410A working fluid</div>
+              </div>
+              <div>
+                <img src="assets/images/Ananya/IMG_1300.jpeg" alt="Our first system retained its AC unit exterior" width="600">
+                <div class="caption">Our first system retained its AC unit exterior</div>
+              </div>
+            </div>
+            <loneImage>
+                <div>
+                  <img src="assets/images/Ananya/IMG_2661.jpeg" alt="V2 of the cryoablation system, I ditched the AC unit housing and updated some components" width="600">
+                  <div class="caption">V2 of the cryoablation system, I ditched the AC unit housing and updated some components</div>
+                </div>
+            </loneImage>
+            <p>
+              When I returned to Ananya Health during the following summers, the goal was to optimize our system for lower power consumption and a smaller form factor
+              while still preserving the efficacy of our earlier devices. This was done utilizing a fully modular system that the team built to isolate individual components 
+              during testing protocols. The component size, operating voltage, refrigerant type, internal volume, ratio of volumes of different regions, working fluid mass,
+              and many other variables were evaluated systematically by our team during this period. One of the devices we tested in our system was an electronic throttling
+              controller, a device designed to automatically open and close the valve, allowing refrigerant to flow through the PEEK tubing to the probe tip. 
+            </p>
+            <p>
+              The theory here
+              was straightforward: we had chosen a new working fluid due to its availability, environmental safety, and low toxicity, but we were having issues with our 
+              new refrigerant's ability to evaporate rapidly at the probe tip. By manually throttling the valve responsible for sending liquid refrigerant to the probe tip,
+              we were able to send small quantities of refrigerant to the probe, allowing them to fully evaporate before returning to the compressor. This reduced the issues
+              related to liquid refrigerant running through the compressor, also known as slugging, which can damage compressor components, while retaining adequate cooling
+              capacity and probe temperature. The logical next step was to automate this process and standardize it. I built a device using a high-torque servo motor, an Arduino,
+              pressure sensors for the low and high sides of the system, and custom 3D printed components to achieve the desired result. The device worked by monitoring 
+              pressure values both before the valve and at the compressor inlet, and opening/closing the valve to maximise refrigerant delivered to the probe tip while
+              minimizing unevaporated refrigerant ending up at the compressor inlet. Below are some photos of my final design.
+            </p>
+            <div class="gallery">
+              <div>
+                <img src="assets/images/Ananya/IMG_0302.jpg" alt="The electronic throttling controller (ETC) servo, valve, and pressure transducer" width="600">
+                <div class="caption">The electronic throttling controller (ETC) servo, valve, and pressure transducer</div>
+              </div>
+              <div>
+                <img src="assets/images/Ananya/IMG_0304.jpg" alt="ETC Arduino board setup" width="600">
+                <div class="caption">ETC Arduino board setup</div>
+              </div>
+              <div>
+                <img src="assets/images/Ananya/IMG_0298.jpg" alt="A 3D printed spline adapter allowed the servo to directly interface with the valve" width="600">
+                <div class="caption">A 3D printed spline adapter allowed the servo to directly interface with the valve</div>
+              </div>
+            </div>
+            <p>
+              The next technology I worked on was a recuperator. A recuperator is a device designed ti increase the efficiency of a cooling system by transferring spare
+              cooling capacity from the evaporating working fluid to the high-pressure liquid line. This amplifies the power of the condenser and delivers a cooled liquid
+              refrigerant, which is capable of removing more heat than a warm liquid at the same pressure. This idea has been used in other refrigeration designs, so I thought
+              it prudent to evaluate the effects of a recuperator on our device. I built one from a combination of different copper pipes and soft copper tubing sizes, and
+              we evaluated its efficacy on our modular test device.
+            </p>
+            <div class="gallery">
+              <div>
+                <img src="assets/images/Ananya/IMG_0237.jpg" alt="Completed recuperator design" width="600">
+                <div class="caption">Completed recuperator design</div>
+              </div>
+              <div>
+                <img src="assets/images/Ananya/IMG_0239.jpg" alt="Interior of my recuperator design" width="600">
+                <div class="caption">Interior of my recuperator design</div>
+              </div>
+            </div>
+            <p>
+              As part of the Y-Combinator class of 2021 showcase, I built a functional prototype of a fully battery-powered "off-grid" capable cryoablation system. The design
+              was intentionally more polished and friendly, taking into consideration the human factors at play in the clinics where it would be used. The device used a 24VDC
+              system to cool a probe tip similar to our pre-existing systems, but was contained in an acrylic case using an aluminum chassis for stability and robustness.
+            </p>
+            <div class="gallery">
+              <div>
+                <img src="assets/images/Ananya/Ananya_Prototype.png" alt="A prototype system I built specifically for Y-Combinator class of 2021 showcase" width="600">
+                <div class="caption">A prototype system I built specifically for Y-Combinator class of 2021 showcase</div>
+              </div>
+              <div>
+                <img src="assets/images/Ananya/IMG_0458.jpeg" alt="Exterior case design for YC device" width="600">
+                <div class="caption">Interior of my recuperator design</div>
+              </div>
+              <div>
+                <img src="assets/images/Ananya/IMG_0459.jpeg" alt="Top view showing aluminum frame and handle" width="600">
+                <div class="caption">Interior of my recuperator design</div>
+              </div>
+            </div>
           </details>
         </div>
       </section>
